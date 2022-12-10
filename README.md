@@ -4,4 +4,3 @@ this is a little project that i'm doing in course of web devlopment in Tascom Ac
 
 there is module pasts, variables in CSS, semantic estructures in HTML and manipulation of DOM on javascript.
 Enjoy It! 
-##smile

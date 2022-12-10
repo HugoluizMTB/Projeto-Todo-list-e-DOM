@@ -1,0 +1,140 @@
+@import url(/src/css/config.css);
+
+.container {
+    max-width: 1060px;
+    width: 100%;
+    margin: 70px auto;
+}
+
+/* wrapper comporta vários itens */
+/*.wrapper {
+
+}*/
+
+header h1 {
+    font-size: var(--text-lg);
+}
+
+header h1 span {
+    font-weight: 200;
+}
+
+header p {
+    color: var(--op-60);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--sp-md);
+    margin-top: var(--sp-lg);
+}
+
+main section {
+    background-color: var(--op-05);
+    border-radius: var( --sp-xs);
+    padding: var(--sp-md);
+}
+
+.new-todo-container {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-task-container {
+    grid-row: span 2;
+}
+
+
+.todo-task-container ul li{
+    position: relative;
+    display: flex;
+    padding: var(--sp-xs) var(--sp-md); 
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--op-05);
+    border-radius: var(--round-sm);
+    animation: show .5s forwards;
+}
+
+.todo-task-container ul li p {
+    color: var(--op-60);
+}
+
+.delete-button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete-button:hover {
+    transform: scale(120%);
+    }
+
+.todo-finished {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-finished p {
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+#todo-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+}
+#todo-form button {
+    width: 100%;
+    border-radius: var(--round-sm);
+    border: none;
+    padding: var(--sp-xs);
+    border-color: var(--obj-);
+    transition: .3s;
+}
+
+#todo-form button:hover {
+    opacity: 0.8;
+    cursor:pointer;
+
+}
+
+
+.field {
+    display: flex;
+    gap: var(--sp-xxs);
+    flex-direction: column;
+}
+
+.field input {
+    border-radius: var(--round-sm);
+    padding: var(--sp-sm);
+    border: none;
+    background-color: var(--op-05);
+    color: var(--obj-);
+    border: 1px solid transparent;
+}
+
+.field input.invalid {
+    border-color: var(--red);
+
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

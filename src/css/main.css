@@ -41,13 +41,22 @@ main section {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .todo-task-container {
     grid-row: span 2;
 }
+/* //scrol */
+.todo-task-container ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+    padding-right: var(--sp-sm);
+    padding-top: var(--sp-sm);
+    gap: var(--sp-sm);
 
-
+}
 .todo-task-container ul li{
     position: relative;
     display: flex;
@@ -136,5 +145,14 @@ main section {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .new-todo-container {
+        grid-column: span 2;
+    }
+    .todo-finished {
+        grid-column: span 2;
     }
 }

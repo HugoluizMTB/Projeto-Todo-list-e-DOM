@@ -36,6 +36,24 @@ main section {
     padding: var(--sp-md);
 }
 
+.emotional-phrase {
+    margin: var(--sp-md);
+}
+
+.emotional-phrase p {
+    font-size: var(--text-sm);
+    color: var(--op-60);
+}
+
+.emotional-phrase p:nth-child(2) {
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-xxs);
+}
 .new-todo-container {
     grid-column: 2;
     display: flex;
@@ -50,6 +68,8 @@ main section {
 /* //scrol */
 .todo-task-container ul {
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     max-height: 500px;
     padding-right: var(--sp-sm);
@@ -72,6 +92,9 @@ main section {
     color: var(--op-60);
 }
 
+.todo-task-container ul li.hide {
+    animation: hide 0.3s forwards;
+}
 .delete-button {
     position: absolute;
     top: -5px;
@@ -140,11 +163,22 @@ main section {
 @keyframes show {
     from {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes hide {
+    from{
+        opacity: 1;
+        transform: translate(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translate(-50px);
     }
 }
 
